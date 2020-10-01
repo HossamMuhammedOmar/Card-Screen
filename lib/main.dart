@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xff3498db),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -36,54 +37,48 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal.shade900,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+20 01005329797',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 30.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                color: Colors.white,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal.shade900,
+                  ),
+                  title: Text(
+                    '+20 01005329797',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(
+                child: ListTile(
+                    leading: Icon(
                       Icons.mail,
                       color: Colors.teal.shade900,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       'hossamomar9876@gmail.com',
                       style: TextStyle(
                         color: Colors.teal.shade900,
                         fontSize: 20.0,
                         fontFamily: 'SourceSansPro',
                       ),
-                    )
-                  ],
-                ),
-              )
+                    )),
+              ),
             ],
           ),
         ),
@@ -91,3 +86,23 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// child: Row(
+//                     children: [
+//                       Icon(
+//                         Icons.phone,
+//                         color: Colors.teal.shade900,
+//                       ),
+//                       SizedBox(
+//                         width: 10.0,
+//                       ),
+//                       Text(
+//                         '+20 01005329797',
+//                         style: TextStyle(
+//                           color: Colors.teal.shade900,
+//                           fontFamily: 'SourceSansPro',
+//                           fontSize: 20.0,
+//                         ),
+//                       ),
+//                     ],
+//                   ),
